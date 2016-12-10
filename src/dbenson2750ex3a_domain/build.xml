@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="Term.java"/>
+			<include name="School.java"/>
+			<include name="Campus.java"/>
+			<include name="Building.java"/>
+			<include name="Room.java"/>
+			<include name="AssignmentType.java"/>
+			<include name="CourseGrade.java"/>
+			<include name="AssignmentGrade.java"/>
+			<include name="Assignment.java"/>
+			<include name="Section.java"/>
+			<include name="Instructor.java"/>
+			<include name="Person.java"/>
+			<include name="Student.java"/>
+			<include name="StudentMajor.java"/>
+			<include name="Major.java"/>
+			<include name="Department.java"/>
+			<include name="Course.java"/>
+		</javac>
+	</target>
+</project>
